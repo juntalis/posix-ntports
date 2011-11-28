@@ -4,7 +4,7 @@ Simple which implementation for Windows, which a few minor changes.
 
 #### Usage
 
-	which [-a|/a] [-h|-?|/?] program
+	which [-h|-?] [-a] [-n] [-x] program
 
 * -a       List all matches found. (Default: Show the first match and exit.) - NOT YET IMPLEMENTED
 * -h,-?    Show usage text.
@@ -44,3 +44,4 @@ Using command prompt:
 #### To Do
 
 * Add code for the -a switch. Need to write a new function for iterating the PATH, etc.
+* Use a list struct to allow the user to specify multiple executables to search for.
