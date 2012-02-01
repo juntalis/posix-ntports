@@ -1,0 +1,118 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "which", "build\which.vcxproj", "{A41CF3A2-3D2F-4F31-98B8-CE1E369618AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Reference Material", "Reference Material", "{132AC3A4-3D08-4A3C-98DF-8F5109013ABF}"
+	ProjectSection(SolutionItems) = preProject
+		thirdparty\reference_docs\env.html = thirdparty\reference_docs\env.html
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Properties", "Properties", "{30D9A199-7D54-4261-B561-ADE2659287A9}"
+	ProjectSection(SolutionItems) = preProject
+		build\posix-ntports.props = build\posix-ntports.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{EDD608F0-DD2A-4D28-908E-57DEE53A5A54}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Third Party", "Third Party", "{82ECCB42-6BE1-4C07-B19F-07BC5A063569}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "gengetopt", "thirdparty\gengetopt\gengetopt.vcxproj", "{B61CF3A2-3D2F-4F31-98B8-CE1E369618AF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "core", "core", "{5DCEA16B-FB72-471A-9969-AEBC0DC5170F}"
+	ProjectSection(SolutionItems) = preProject
+		build\core\common.props = build\core\common.props
+		build\core\config.props = build\core\config.props
+		build\core\target.props = build\core\target.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "thirdparty", "thirdparty", "{674803FA-C5F4-4674-AEB7-F438F563CFE6}"
+	ProjectSection(SolutionItems) = preProject
+		thirdparty\common\props\posixports.props = thirdparty\common\props\posixports.props
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{01C0AA53-77D1-4436-8614-1E2B1DF228C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gengetopt", "gengetopt", "{758524A1-56CB-4C52-9728-C76FF2475D3D}"
+	ProjectSection(SolutionItems) = preProject
+		build\tools\gengetopt\ggo.props = build\tools\gengetopt\ggo.props
+		build\tools\gengetopt\ggo.xml = build\tools\gengetopt\ggo.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Build", "Build", "{C83609AE-E0E5-46A2-AF1A-1BD794851D93}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tasks", "Tasks", "{0968C20D-B81D-4A42-A321-7E2C29FC3724}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "msbuild", "msbuild", "{723BC579-D055-4917-9FA0-0B50AD22E4F8}"
+	ProjectSection(SolutionItems) = preProject
+		build\msbuild\props\srcglobals.props = build\msbuild\props\srcglobals.props
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSBuild.GenGetOpt", "build\msbuild\src\gengetopt\MSBuild.GenGetOpt.csproj", "{18A47BA7-E4C4-4E6F-9C5C-4009F163E7F9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "env", "build\env.vcxproj", "{A41CF3A2-3D2F-4F31-98B8-CE1E369618B0}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ln", "build\ln.vcxproj", "{A41CF3A2-3D2F-4F31-98B8-CE1E369618B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618AF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618AF}.Debug|Win32.Build.0 = Debug|Win32
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618AF}.Debug|x64.ActiveCfg = Debug|x64
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618AF}.Debug|x64.Build.0 = Debug|x64
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618AF}.Release|Win32.ActiveCfg = Release|Win32
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618AF}.Release|Win32.Build.0 = Release|Win32
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618AF}.Release|x64.ActiveCfg = Release|x64
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618AF}.Release|x64.Build.0 = Release|x64
+		{B61CF3A2-3D2F-4F31-98B8-CE1E369618AF}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B61CF3A2-3D2F-4F31-98B8-CE1E369618AF}.Debug|Win32.Build.0 = Debug|Win32
+		{B61CF3A2-3D2F-4F31-98B8-CE1E369618AF}.Debug|x64.ActiveCfg = Debug|x64
+		{B61CF3A2-3D2F-4F31-98B8-CE1E369618AF}.Debug|x64.Build.0 = Debug|x64
+		{B61CF3A2-3D2F-4F31-98B8-CE1E369618AF}.Release|Win32.ActiveCfg = Release|Win32
+		{B61CF3A2-3D2F-4F31-98B8-CE1E369618AF}.Release|Win32.Build.0 = Release|Win32
+		{B61CF3A2-3D2F-4F31-98B8-CE1E369618AF}.Release|x64.ActiveCfg = Release|x64
+		{B61CF3A2-3D2F-4F31-98B8-CE1E369618AF}.Release|x64.Build.0 = Release|x64
+		{18A47BA7-E4C4-4E6F-9C5C-4009F163E7F9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{18A47BA7-E4C4-4E6F-9C5C-4009F163E7F9}.Debug|Win32.Build.0 = Debug|Win32
+		{18A47BA7-E4C4-4E6F-9C5C-4009F163E7F9}.Debug|x64.ActiveCfg = Debug|Win32
+		{18A47BA7-E4C4-4E6F-9C5C-4009F163E7F9}.Release|Win32.ActiveCfg = Release|Win32
+		{18A47BA7-E4C4-4E6F-9C5C-4009F163E7F9}.Release|Win32.Build.0 = Release|Win32
+		{18A47BA7-E4C4-4E6F-9C5C-4009F163E7F9}.Release|x64.ActiveCfg = Release|Win32
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618B0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618B0}.Debug|Win32.Build.0 = Debug|Win32
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618B0}.Debug|x64.ActiveCfg = Debug|x64
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618B0}.Debug|x64.Build.0 = Debug|x64
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618B0}.Release|Win32.ActiveCfg = Release|Win32
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618B0}.Release|Win32.Build.0 = Release|Win32
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618B0}.Release|x64.ActiveCfg = Release|x64
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618B0}.Release|x64.Build.0 = Release|x64
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618B1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618B1}.Debug|Win32.Build.0 = Debug|Win32
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618B1}.Debug|x64.ActiveCfg = Debug|x64
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618B1}.Debug|x64.Build.0 = Debug|x64
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618B1}.Release|Win32.ActiveCfg = Release|Win32
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618B1}.Release|Win32.Build.0 = Release|Win32
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618B1}.Release|x64.ActiveCfg = Release|x64
+		{A41CF3A2-3D2F-4F31-98B8-CE1E369618B1}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5DCEA16B-FB72-471A-9969-AEBC0DC5170F} = {30D9A199-7D54-4261-B561-ADE2659287A9}
+		{674803FA-C5F4-4674-AEB7-F438F563CFE6} = {30D9A199-7D54-4261-B561-ADE2659287A9}
+		{723BC579-D055-4917-9FA0-0B50AD22E4F8} = {30D9A199-7D54-4261-B561-ADE2659287A9}
+		{EDD608F0-DD2A-4D28-908E-57DEE53A5A54} = {82ECCB42-6BE1-4C07-B19F-07BC5A063569}
+		{B61CF3A2-3D2F-4F31-98B8-CE1E369618AF} = {EDD608F0-DD2A-4D28-908E-57DEE53A5A54}
+		{01C0AA53-77D1-4436-8614-1E2B1DF228C3} = {C83609AE-E0E5-46A2-AF1A-1BD794851D93}
+		{0968C20D-B81D-4A42-A321-7E2C29FC3724} = {C83609AE-E0E5-46A2-AF1A-1BD794851D93}
+		{758524A1-56CB-4C52-9728-C76FF2475D3D} = {01C0AA53-77D1-4436-8614-1E2B1DF228C3}
+		{18A47BA7-E4C4-4E6F-9C5C-4009F163E7F9} = {0968C20D-B81D-4A42-A321-7E2C29FC3724}
+	EndGlobalSection
+EndGlobal

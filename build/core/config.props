@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	
+	<!-- Debug Configuration -->
+	<PropertyGroup Condition="'$(Configuration)'=='Debug'">
+		<LinkIncremental>true</LinkIncremental>
+		<UseDebugLibraries>true</UseDebugLibraries>
+		<WholeProgramOptimization>false</WholeProgramOptimization>
+	</PropertyGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)'=='Debug'" Label="Debug Common">
+		<ClCompile>
+			<Optimization>Disabled</Optimization>
+			<IntrinsicFunctions>false</IntrinsicFunctions>
+			<PreprocessorDefinitions>DEBUG;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<StringPooling>false</StringPooling>
+			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+			<FunctionLevelLinking>false</FunctionLevelLinking>
+			<BrowseInformation>true</BrowseInformation>
+			<InlineFunctionExpansion>Default</InlineFunctionExpansion>
+			<OmitFramePointers>false</OmitFramePointers>
+			<MinimalRebuild>true</MinimalRebuild>
+			<DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+		</ClCompile>
+		<Link>
+			<EnableCOMDATFolding>false</EnableCOMDATFolding>
+			<OptimizeReferences>false</OptimizeReferences>
+			<ProgramDatabaseFile>$(OutDir)$(TargetName).pdb</ProgramDatabaseFile>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+		</Link>
+		<ResourceCompile>
+			<PreprocessorDefinitions>DEBUG;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+		</ResourceCompile>
+	</ItemDefinitionGroup>
+
+	<!-- Release Configuration -->
+	<PropertyGroup Condition="'$(Configuration)'=='Release'">
+		<LinkIncremental>false</LinkIncremental>
+		<UseDebugLibraries>false</UseDebugLibraries>
+		<WholeProgramOptimization>true</WholeProgramOptimization>
+	</PropertyGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)'=='Release'" Label="Release Common">
+		<ClCompile>
+			<Optimization>MaxSpeed</Optimization>
+			<InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+			<IntrinsicFunctions>true</IntrinsicFunctions>
+			<PreprocessorDefinitions>NDEBUG;_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<StringPooling>true</StringPooling>
+			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+			<FunctionLevelLinking>true</FunctionLevelLinking>
+			<EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+			<OmitFramePointers>true</OmitFramePointers>
+			<BufferSecurityCheck>false</BufferSecurityCheck>
+			<BrowseInformation>false</BrowseInformation>
+			<DebugInformationFormat></DebugInformationFormat>
+			<PrecompiledHeader>NotUsing</PrecompiledHeader>
+			<PrecompiledHeaderFile></PrecompiledHeaderFile>
+			<PrecompiledHeaderOutputFile></PrecompiledHeaderOutputFile>
+		</ClCompile>
+		<Link>
+			<GenerateDebugInformation>false</GenerateDebugInformation>
+			<ProgramDatabaseFile></ProgramDatabaseFile>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+			<OptimizeReferences>true</OptimizeReferences>
+			<ProgramDatabaseFile>$(OutSymDir)$(TargetName).pdb</ProgramDatabaseFile>
+			<SetChecksum>true</SetChecksum>
+			<LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
+		</Link>
+		<ResourceCompile>
+			<PreprocessorDefinitions>NDEBUG;_NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+		</ResourceCompile>
+	</ItemDefinitionGroup>
+
+	<!-- x86 Processor Configuration -->
+	<ItemDefinitionGroup  Condition="'$(Platform)'=='Win32'" Label="x86 Processor Common">
+		<Link>
+			<TargetMachine>MachineX86</TargetMachine>
+		</Link>
+	</ItemDefinitionGroup>
+
+	<!-- x64 Processor Configuration -->
+	<ItemDefinitionGroup Condition="'$(Platform)'=='x64'" Label="x64 Processor Common">
+		<ClCompile>
+			<PreprocessorDefinitions>WIN64;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+		</ClCompile>
+		<Link>
+			<TargetMachine>MachineX64</TargetMachine>
+		</Link>
+		<ResourceCompile>
+			<PreprocessorDefinitions>WIN64;_WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+		</ResourceCompile>
+	</ItemDefinitionGroup>
+</Project>

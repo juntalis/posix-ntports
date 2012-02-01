@@ -1,47 +1,14 @@
-## Which for Windows
+## POSIX NT Ports
 
-Simple which implementation for Windows, which a few minor changes.
+Working on consolidating all of my existing MSVC implementations/ports of GNU/Linux utilities into a single solution. Currently includes:
 
-#### Usage
+* env
+* [ln](https://github.com/Juntalis/posix-ntports/wiki/)
+* [which](https://github.com/Juntalis/posix-ntports/wiki/)
+* [msyspath](https://github.com/Juntalis/posix-ntports/wiki/) (A MSYS-based tool featuring SOME of the features of the cygpath tool)
 
-	which [-h|-?] [-a] [-n] [-x] program
+All projects are based on Visual C 2010. There is also a VC 2010 project for compiling [gengetopt](http://www.gnu.org/software/gengetopt/gengetopt.html) with the MSVC compiler. It uses code downloaded from the [GNU Win32 Project](http://www.gnu.org/software/gengetopt/gengetopt.html).
 
-* -a       List all matches found. (Default: Show the first match and exit.) - NOT YET IMPLEMENTED
-* -h,-?    Show usage text.
-* -n       Do not print a newline after the resolved path. (Default: "<full path>\r\n")
-* -x       Do not use the PATHEXT variable to add extensions. (Default: Use PATHEXT - See below)
+A lot of the tools use common headers, macros, and definitions, so I'm trying to eliminate the overlap and rewrite a lot of the code before I get back to completing the tools that aren't quite done.
 
-The program emulates the method by which cmd.exe resolves the path to a file. 
-
-The program uses the PATH environment variable, prepended with the user's current directory to search for a match.
-
-If -x  is not specified, the program will first attempt to match the file exactly as it was specified. (cmd != cmd.exe) If no match was found (or -a is specified), it will then use the PATHEXT environment variable and search for a file matching <program>.<extension>. (cmd == cmd.exe)
-
-#### Example
-
-Using command prompt:
-
-	echo @echo Test1 > test.bat
-	echo @echo Test2 > test.bat.bat
-	
-	which test
-	-- Returns:
-		[Current Folder]\test.bat
-
-	which test.bat
-	-- Returns:
-		[Current Folder]\test.bat
-	
-	which -a test.bat
-	-- Returns:
-		[Current Folder]\test.bat
-		[Current Folder]\test.bat.bat
-
-	which -x test
-	-- Returns:
-		no test in ([PATH])
-
-#### To Do
-
-* Add code for the -a switch. Need to write a new function for iterating the PATH, etc.
-* Use a list struct to allow the user to specify multiple executables to search for.
+I also need to update the individual readmes for anything that's changed, and write a custom VC 2010 build tool for using the MSYS gcc compiler for msyspath.

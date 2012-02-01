@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<OutDir>$(BinDir)</OutDir>
+		<OutputPath>$(BinDir)</OutputPath>
+		<IntDir>$(ObjDir)</IntDir>
+	</PropertyGroup>
+	
+	<ItemDefinitionGroup>
+		<ClCompile>
+			<AdditionalIncludeDirectories>$(SrcDir)$(ProjectName);$(ResDir)$(ProjectName);$(SolutionDir)include;$(SrcDir)common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+			<ExceptionHandling>false</ExceptionHandling>
+			<CompileAs>CompileAsC</CompileAs>
+		</ClCompile>
+		<ResourceCompile>
+			<AdditionalIncludeDirectories>$(SrcDir)$(ProjectName);$(ResDir)$(ProjectName);$(SolutionDir)include;$(SrcDir)common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	</ItemDefinitionGroup>
+	
+	<ItemGroup>
+		<ClInclude Include="$(SrcDir)common\targetver.h" />
+		<ClInclude Include="$(SrcDir)common\globals.h" />
+		<ClInclude Condition="exists('$(SrcDir)common\$(ProjectName).h')" Include="$(SrcDir)common\$(ProjectName).h" />
+		<ClInclude Condition="exists('$(SrcDir)$(ProjectName)\$(ProjectName).h')" Include="$(SrcDir)$(ProjectName)\$(ProjectName).h" />
+		<ClInclude Condition="exists('$(ResDir)$(ProjectName)\resource.h')" Include="$(ResDir)$(ProjectName)\resource.h" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<ClCompile Condition="exists('$(SrcDir)$(ProjectName)\$(ProjectName).c')" Include="$(SrcDir)$(ProjectName)\$(ProjectName).c" />
+	</ItemGroup>
+	
+	<ItemGroup>
+		<None Condition="exists('$(ResDir)$(ProjectName)\$(ProjectName).ico')" Include="$(ResDir)$(ProjectName)\$(ProjectName).ico" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ResourceCompile Condition="exists('$(ResDir)$(ProjectName)\$(ProjectName).rc')" Include="$(ResDir)$(ProjectName)\$(ProjectName).rc" />
+	</ItemGroup>
+</Project>

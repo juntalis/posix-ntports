@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<PropertyGroup>
+		<GGODir>..\..\..\tools\gengetopt\</GGODir>
+	</PropertyGroup>
+	<UsingTask TaskName="MSBuild.GenGetOpt.GGO" AssemblyFile="$(GGODir)MSBuild.GenGetOpt.dll" />
+
+	<Target Name="Build">
+		<GGO Include="test.ggo" />
+	</Target>
+</Project>

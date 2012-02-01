@@ -1,0 +1,22 @@
+package "ln.exe"
+version "1.0.0"
+purpose "Native Win32 port of the GNU ln tool for creating symbolic/hardlinks."
+usage "ln [OPTION]... [-T] TARGET LINK_NAME   (1st form)\n  or:  ln [OPTION]... TARGET                  (2nd form)\n  or:  ln [OPTION]... TARGET... DIRECTORY     (3rd form)\n  or:  ln [OPTION]... -t DIRECTORY TARGET...  (4th form)"
+args "--file-name=lnargs -G -u"
+
+section " Options"
+#option	"backup"				-	"make a junction to a directory" string optional
+option	"directory"				d	"make a junction to a directory" optional
+option	"force"					f	"remove existing destination files" optional
+option	"interactive"			i	"prompt whether to remove destinations" optional
+option	"logical"				L	"make hard links to symbolic link references" optional
+option	"no-dereference"		n	"treat destination that is a symlink to a directory as if it were a normal file" optional
+option	"physical"				P	"make hard links directly to symbolic links" optional
+option	"symbolic"				s	"make symbolic links instead of hard links" optional
+#option	"suffix"				S	"override the usual backup suffix" string optional default="~"
+option	"target-directory"		t	"specify the DIRECTORY in which to create the links" string optional
+option	"no-target-directory"	T	"treat LINK_NAME as a normal file" optional
+option	"verbose"				V	"print name of each linked file" optional
+
+section " Cygwin-Specific Options"
+option "cyglink" c "Create a cygwin symbolic link instead of a native Win32 symbolic link. (Assumes -s)" optional

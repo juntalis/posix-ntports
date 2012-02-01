@@ -1,7 +1,9 @@
 obj
+ipch
 bin
 *.aps
 *.suo
 *.sdf
 *.user
 *.opensdf
+_ReSharper*

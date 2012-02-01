@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\acceptedvalues.cpp" />
+    <ClCompile Include="src\argsdef.c" />
+    <ClCompile Include="src\cmdline.c" />
+    <ClCompile Include="src\dummy.c" />
+    <ClCompile Include="src\fileutils.cpp" />
+    <ClCompile Include="src\gengetopt.cc" />
+    <ClCompile Include="src\getopt.c" />
+    <ClCompile Include="src\getopt1.c" />
+    <ClCompile Include="src\ggos.cpp" />
+    <ClCompile Include="src\gm.cc" />
+    <ClCompile Include="src\gm_utils.cpp" />
+    <ClCompile Include="src\parser.cc" />
+    <ClCompile Include="src\scanner.cc" />
+    <ClCompile Include="src\skels\clear_arg.cc" />
+    <ClCompile Include="src\skels\clear_given.cc" />
+    <ClCompile Include="src\skels\copyright.cc" />
+    <ClCompile Include="src\skels\custom_getopt_gen.cc" />
+    <ClCompile Include="src\skels\c_source.cc" />
+    <ClCompile Include="src\skels\dependant_option.cc" />
+    <ClCompile Include="src\skels\exit_failure.cc" />
+    <ClCompile Include="src\skels\file_save.cc" />
+    <ClCompile Include="src\skels\file_save_multiple.cc" />
+    <ClCompile Include="src\skels\free_inputs_string.cc" />
+    <ClCompile Include="src\skels\free_list.cc" />
+    <ClCompile Include="src\skels\free_multiple.cc" />
+    <ClCompile Include="src\skels\free_string.cc" />
+    <ClCompile Include="src\skels\generic_option.cc" />
+    <ClCompile Include="src\skels\generic_option_group.cc" />
+    <ClCompile Include="src\skels\given_field.cc" />
+    <ClCompile Include="src\skels\group_counter.cc" />
+    <ClCompile Include="src\skels\group_option.cc" />
+    <ClCompile Include="src\skels\handle_help.cc" />
+    <ClCompile Include="src\skels\handle_version.cc" />
+    <ClCompile Include="src\skels\header.cc" />
+    <ClCompile Include="src\skels\init_args_info.cc" />
+    <ClCompile Include="src\skels\multiple_fill_array.cc" />
+    <ClCompile Include="src\skels\multiple_fill_array_default.cc" />
+    <ClCompile Include="src\skels\multiple_option.cc" />
+    <ClCompile Include="src\skels\multiple_opt_list.cc" />
+    <ClCompile Include="src\skels\multiple_opt_struct.cc" />
+    <ClCompile Include="src\skels\option_arg.cc" />
+    <ClCompile Include="src\skels\print_help_string.cc" />
+    <ClCompile Include="src\skels\required_option.cc" />
+    <ClCompile Include="src\skels\reset_group.cc" />
+    <ClCompile Include="src\skels\update_arg.cc" />
+    <ClCompile Include="src\skels\update_given.cc" />
+    <ClCompile Include="src\yyerror.cc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\acceptedvalues.h" />
+    <ClInclude Include="src\argsdef.h" />
+    <ClInclude Include="src\cmdline.h" />
+    <ClInclude Include="src\config.h" />
+    <ClInclude Include="src\errorcodes.h" />
+    <ClInclude Include="src\fileutils.h" />
+    <ClInclude Include="src\gengetopt.h" />
+    <ClInclude Include="src\getopt.h" />
+    <ClInclude Include="src\ggos.h" />
+    <ClInclude Include="src\ggo_options.h" />
+    <ClInclude Include="src\global_opts.h" />
+    <ClInclude Include="src\gm.h" />
+    <ClInclude Include="src\gm_utils.h" />
+    <ClInclude Include="src\gnugetopt.h" />
+    <ClInclude Include="src\groups.h" />
+    <ClInclude Include="src\my_map.h" />
+    <ClInclude Include="src\my_sstream.h" />
+    <ClInclude Include="src\my_string.h" />
+    <ClInclude Include="src\parser.h" />
+    <ClInclude Include="src\skels\clear_arg.h" />
+    <ClInclude Include="src\skels\clear_given.h" />
+    <ClInclude Include="src\skels\copyright.h" />
+    <ClInclude Include="src\skels\custom_getopt_gen.h" />
+    <ClInclude Include="src\skels\c_source.h" />
+    <ClInclude Include="src\skels\dependant_option.h" />
+    <ClInclude Include="src\skels\exit_failure.h" />
+    <ClInclude Include="src\skels\file_save.h" />
+    <ClInclude Include="src\skels\file_save_multiple.h" />
+    <ClInclude Include="src\skels\free_inputs_string.h" />
+    <ClInclude Include="src\skels\free_list.h" />
+    <ClInclude Include="src\skels\free_multiple.h" />
+    <ClInclude Include="src\skels\free_string.h" />
+    <ClInclude Include="src\skels\generic_option.h" />
+    <ClInclude Include="src\skels\generic_option_group.h" />
+    <ClInclude Include="src\skels\given_field.h" />
+    <ClInclude Include="src\skels\group_counter.h" />
+    <ClInclude Include="src\skels\group_option.h" />
+    <ClInclude Include="src\skels\handle_help.h" />
+    <ClInclude Include="src\skels\handle_version.h" />
+    <ClInclude Include="src\skels\header.h" />
+    <ClInclude Include="src\skels\init_args_info.h" />
+    <ClInclude Include="src\skels\multiple_fill_array.h" />
+    <ClInclude Include="src\skels\multiple_fill_array_default.h" />
+    <ClInclude Include="src\skels\multiple_option.h" />
+    <ClInclude Include="src\skels\multiple_opt_list.h" />
+    <ClInclude Include="src\skels\multiple_opt_struct.h" />
+    <ClInclude Include="src\skels\option_arg.h" />
+    <ClInclude Include="src\skels\print_help_string.h" />
+    <ClInclude Include="src\skels\required_option.h" />
+    <ClInclude Include="src\skels\reset_group.h" />
+    <ClInclude Include="src\skels\update_arg.h" />
+    <ClInclude Include="src\skels\update_given.h" />
+    <ClInclude Include="src\strdup.h" />
+    <ClInclude Include="src\yyerror.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B61CF3A2-3D2F-4F31-98B8-CE1E369618AF}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>gengetopt</RootNamespace>
+    <UiFlavor>Console</UiFlavor>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(SolutionDir)build\core\common.props" Label="Common Props" />
+    <Import Project="$(ThirdPartyCommon)props\posixports.props" Label="POSIX Port Properties" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <PreprocessorDefinitions>HAVE_CONFIG_H=1;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

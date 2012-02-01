@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:msb="http://schemas.microsoft.com/developer/msbuild/2003" elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/developer/msbuild/2003" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:include schemaLocation="MSBuild\Microsoft.Build.Commontypes.xsd" />
+	<xs:complexType name="GGOType">
+		<xs:complexContent mixed="false">
+			<xs:extension base="msb:TaskType">
+				<xs:attribute name="Overwrite" use="optional" />
+				<xs:attribute name="Include" type="msb:non_empty_string" use="required" />
+				<xs:attribute name="GGODir" type="xs:string" use="optional" />
+				<xs:attribute name="Function" type="xs:string" use="optional" />
+				<xs:attribute name="Struct" type="xs:string" use="optional" />
+				<xs:attribute name="Output" type="xs:string" use="optional" />
+				<xs:attribute name="OutputDir" type="xs:string" use="optional" />
+				<xs:attribute name="OutputExt" type="xs:string" use="optional" />
+				<xs:attribute name="LongHelp" use="optional" />
+				<xs:attribute name="DefaultOptional" use="optional" />
+				<xs:attribute name="UnNamedArgs" type="xs:string" use="optional" />
+				<xs:attribute name="StrParser" use="optional" />
+				<xs:attribute name="ConfParser" use="optional" />
+				<xs:attribute name="IncludeGetOpt" use="optional" />
+				<xs:attribute name="NoHelp" use="optional" />
+				<xs:attribute name="NoVersion" use="optional" />
+				<xs:attribute name="NoError" use="optional" />
+				<xs:attribute name="Version" type="xs:string" use="optional" />
+				<xs:attribute name="PackageName" type="xs:string" use="optional" />
+			</xs:extension>
+		</xs:complexContent>
+	</xs:complexType>
+	<xs:element name="GGO" substitutionGroup="msb:Task" type="msb:GGOType" />
+</xs:schema>
