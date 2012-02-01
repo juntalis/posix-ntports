@@ -3,9 +3,9 @@
 Working on consolidating all of my existing MSVC implementations/ports of GNU/Linux utilities into a single solution. Currently includes:
 
 * env
-* [ln](https://github.com/Juntalis/posix-ntports/wiki/)
-* [which](https://github.com/Juntalis/posix-ntports/wiki/)
-* [msyspath](https://github.com/Juntalis/posix-ntports/wiki/) (A MSYS-based tool featuring SOME of the features of the cygpath tool)
+* [ln](https://github.com/Juntalis/posix-ntports/wiki/ln)
+* [which](https://github.com/Juntalis/posix-ntports/wiki/which)
+* [msyspath](https://github.com/Juntalis/posix-ntports/wiki/ln) (A MSYS-based tool featuring SOME of the features of the cygpath tool)
 
 All projects are based on Visual C 2010. There is also a VC 2010 project for compiling [gengetopt](http://www.gnu.org/software/gengetopt/gengetopt.html) with the MSVC compiler. It uses code downloaded from the [GNU Win32 Project](http://www.gnu.org/software/gengetopt/gengetopt.html).
 
